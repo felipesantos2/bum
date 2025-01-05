@@ -1,0 +1,15 @@
+{
+    "name": "felipesantos2/bum",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "felipessntos2",
+            "email": "santospinheiro627@gmail.com"
+        }
+    ],
+    "require": {}
+}
