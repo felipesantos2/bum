@@ -1,7 +1,5 @@
 services:
     container:
         build:
-            context: 
+            context:
             dockerfile: Dockerfile
-    
-    

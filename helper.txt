@@ -1,7 +1,8 @@
-docker run --rm --interactive --tty \
-  --volume $PWD:/app \
-  composer composer update
+docker run --rm --interactive --tty --name composer \
+  --volume $PWD \
+  composer composer init
 
+docker run --rm --interactive --tty --name composer --volume $PWD:/ composer composer init -y
 ./cli make:model Produto
 
 // php bum make:controller ProductsController 
