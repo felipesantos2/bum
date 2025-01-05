@@ -11,5 +11,7 @@
             "email": "santospinheiro627@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "laravel/sail": "^1.39"
+    }
 }
