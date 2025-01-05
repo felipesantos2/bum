@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+// chmod +x test
+
+echo __FILE__ . PHP_EOL;
+echo PHP_EOL;
+
+print_r($_SERVER['argv']);
+
+echo PHP_EOL;
+echo PHP_EOL;
