@@ -15,7 +15,14 @@ function makeModel(): void
     if (empty($fileName)) {
         return;
     }
+
     $file = ucfirst($fileName);
-    
+
     touch($modelPath . '/' . $file . '.php');
+
+    $boilerplate = file_get_contents(__DIR__ . '/boilerplates/model-boilerplate.txt');
+
+    $content = str_replace('{% $name %}', $file,  $boilerplate);
+
+    file_put_contents($modelPath . '/' . $file . '.php', $content);
 }

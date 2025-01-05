@@ -18,12 +18,11 @@ function makeController()
 
     $file = ucfirst($fileName);
 
-
     touch($controllerPath . '/' . $file . '.php');
 
-    // $boilerplate = file_get_contents(__DIR__ . '/controller-boilerplate.txt');
+    $boilerplate = file_get_contents(__DIR__ . '/boilerplates/controller-boilerplate.txt');
 
-    // $controllerContent = str_replace('{% $name %}', $file,  $boilerplate);
+    $content = str_replace('{% $name %}', $file,  $boilerplate);
 
-    // file_put_contents($controllerPath . '/' . $file . '.php', $controllerContent);
+    file_put_contents($controllerPath . '/' . $file . '.php', $content);
 }

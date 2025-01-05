@@ -2,7 +2,7 @@
 
 namespace \app\controllers;
 
-class {% $name %} extends AbstractController
+class UserController extends Controller
 {
     public function index() { }
     public function create() { }
