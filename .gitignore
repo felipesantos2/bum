@@ -134,3 +134,6 @@ composer.json
 
 vendor/
 /vendor/
+
+data/
+/data/
