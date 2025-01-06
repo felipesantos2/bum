@@ -137,3 +137,6 @@ vendor/
 
 data/
 /data/
+mysql_data/
+/mysql_data/
+*/mysql_data/
