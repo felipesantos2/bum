@@ -3,24 +3,34 @@ services:
         build:
             context: '.docker/php'
             dockerfile: Dockerfile
-            container_name: php:php:8.4.2-fpm_personal
-            image: php_fpm
+            container_name: php_fpm
+            image: php:php:8.4.2-fpm
+        environment:
+        volumes:
+            - '.:/var/www/html'
+        networks:
     nginx:
         build:
             context: '.docker/nginx'
             dockerfile: Dockerfile
-            container_name: php:php:8.4.2-fpm_personal
-            image: nginx_server
+            container_name: nginx_server
+            image: nginx:1.27.3-alpine-slim
+        environment:
+        volumes:
+            - '.:/var/www/html'
+        networks:
     mysql:
         build:
             context: '.docker/mysql'
             dockerfile: Dockerfile
-            container_name: php:php:8.4.2-fpm_personal
-            image: mysql_server
+            container_name: mysql_server
+            image: mysql:8.4.0
+        environment:
+        volumes:
+            - '.:/var/www/html'
+        networks:
 
 networks:
     bridge:
-    - php_network
-
-volumes:
+        - php_network
 
