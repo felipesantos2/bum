@@ -12,7 +12,7 @@ function makeController()
         return;
     }
 
-    if (empty($fileName)) { 
+    if (empty($fileName)) {
         return;
     }
 

@@ -1,5 +1,26 @@
 services:
-    container:
+    php:
         build:
-            context:
+            context: '.docker/php'
             dockerfile: Dockerfile
+            container_name: php:php:8.4.2-fpm_personal
+            image: php_fpm
+    nginx:
+        build:
+            context: '.docker/nginx'
+            dockerfile: Dockerfile
+            container_name: php:php:8.4.2-fpm_personal
+            image: nginx_server
+    mysql:
+        build:
+            context: '.docker/mysql'
+            dockerfile: Dockerfile
+            container_name: php:php:8.4.2-fpm_personal
+            image: mysql_server
+
+networks:
+    bridge:
+    - php_network
+
+volumes:
+

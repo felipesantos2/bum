@@ -2,14 +2,9 @@
 
 namespace \app\controllers;
 
-abstract class Controller
+class HomeController extends Controller
 {
-    public function index()
-    {
-            echo "olá";
-    }
-
-    public function create() { }
+    public function create() {}
     public function show() { }
     public function edit() { }
     public function store() { }
