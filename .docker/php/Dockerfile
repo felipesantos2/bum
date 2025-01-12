@@ -12,7 +12,7 @@ RUN apk --no-cache update && apk --no-cache add libpng-dev \
     libxml2-dev \
     openssl-dev \
     bash \
-     --virtual .build-deps gcc g++ make
+    --virtual .build-deps gcc g++ make
 
 RUN docker-php-ext-install gd pdo pdo_mysql
 
